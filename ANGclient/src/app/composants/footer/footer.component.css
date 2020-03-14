@@ -1,0 +1,19 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #FFFFFF;
+}
+a{
+    color: #fff;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.purple{
+    background-color: #aa66cc;
+}
+.deep-purple{
+    background-color: #9933CC;
+}
