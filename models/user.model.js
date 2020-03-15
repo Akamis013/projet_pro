@@ -11,7 +11,9 @@ Definition
     const MongooseSchema = new Schema({
         identity: String,
         firstname: String,
-        lastname: String
+        lastname: String,
+        mail : String,
+        password : String 
     });
 //
 
