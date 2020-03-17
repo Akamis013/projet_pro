@@ -1,20 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import {initMap} from '../../../map.js';
 
+
+
+declare var ol: any;
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.css']
 })
+
+
+
 export class AccueilComponent implements OnInit {
+
+  map: any;
 
   constructor() { }
 
   ngOnInit() {
-
-    initMap();
-
-
+    this.map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([73.8567, 18.5204]),
+        zoom: 8
+      })
+    });
   }
-
 }
