@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {initMap} from '../../../map.js';
 
 @Component({
   selector: 'app-accueil',
@@ -10,6 +11,10 @@ export class AccueilComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    initMap();
+
+
   }
 
 }
