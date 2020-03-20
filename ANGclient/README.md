@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Sites Julien 
+
+THEME
+https://elements.envato.com/fr/
+https://tympanus.net/codrops/?s=form&search-type=posts
+https://tympanus.net/codrops/2013/05/21/natural-language-form-with-custom-input-elements/``
+
+DATA
+https://opendata.paris.fr/explore/dataset/logements-sociaux-finances-a-paris/information/
+https://www.data.gouv.fr/fr/search/?q=logement+achat
+https://ifttt.com
+https://alligator.io/angular/angular-and-leaflet-marker-service/
