@@ -38,3 +38,4 @@ https://opendata.paris.fr/explore/dataset/logements-sociaux-finances-a-paris/inf
 https://www.data.gouv.fr/fr/search/?q=logement+achat
 https://ifttt.com
 https://alligator.io/angular/angular-and-leaflet-marker-service/
+https://openmaptiles.org/docs/website/leaflet/

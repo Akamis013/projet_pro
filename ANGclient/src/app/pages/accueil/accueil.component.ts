@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { HttpClient } from '@angular/common/http';
+
 
 
 declare var ol: any;
@@ -19,6 +21,8 @@ const iconDefault = L.icon({
 L.Marker.prototype.options.icon = iconDefault;
 
 
+
+
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
@@ -28,12 +32,26 @@ L.Marker.prototype.options.icon = iconDefault;
 
 
 export class AccueilComponent implements OnInit {
-
+  logements;
+  private coordonnéesurl = "https://opendata.paris.fr/api/records/1.0/search/?dataset=logements-sociaux-finances-a-paris&facet=annee&facet=bs&facet=mode_real&facet=arrdt&facet=nature_programme"
   map: any;
 
-  constructor() { }
+  constructor(private _httpClient: HttpClient) {}
 
   ngOnInit() {
+
+    this._httpClient.get<any[]>(this.coordonnéesurl).subscribe(
+      (response) =>{
+        console.log(response);
+
+
+      },
+
+      (error) => {
+        console.log('Erreur ! : ' + error);
+      }
+
+    )
 
 
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
