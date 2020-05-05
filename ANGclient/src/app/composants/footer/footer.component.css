@@ -1,6 +1,7 @@
 footer {
     width: 100%;
     color: #FFFFFF;
+    position: sticky;
 }
 a{
     color: #163d39;
