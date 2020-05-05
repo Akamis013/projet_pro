@@ -1,0 +1,18 @@
+form {
+  margin: 15px 0;
+  color: #163d39;
+}
+.form-control {
+  color: #163d39;
+}
+.h4{
+  color:#d30a0f;
+}
+.btn-info{
+  background-color:#d30a0f;
+  border-color: #d30a0f;
+  width: 5°%;
+}
+.btn-info:hover {
+  background-color: #e73221;
+}
