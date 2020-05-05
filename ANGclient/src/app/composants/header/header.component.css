@@ -1,7 +1,10 @@
 .view {
   /*background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
   background-size: cover;*/
-  background-color: #fcbe00;
+  background-color: rgb(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;;
 }
 /*@media (min-width: 768px) {
   .view {
@@ -11,8 +14,14 @@
 }*/
 .navbar {
   z-index: 1;
+  height: auto !important;
 }
-
+.navbar-brand img{
+  width: 200px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #000;
+}
 html,
 body,
 header,
