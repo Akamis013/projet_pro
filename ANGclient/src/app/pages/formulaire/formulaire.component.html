@@ -2,40 +2,58 @@
 <!-- Default form contact -->
 <div class="row justify-content-center">
 
-<form class="text-center border border-light p-4 col-lg-6 offset-lg-3" action="#!">
-  <p class="h4 mb-4">Contact us</p>
+<form class="border border-light p-4 col-lg-7" action="#!">
+  <p class="h4 mb-4">Bénéficiez d’un accompagnement personnalisé et gratuit</p>
 
-  <!-- Name -->
-  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+  <div class="form-row">
+    <div class="col">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" class="form-control mb-4" placeholder="">
+    </div>
+    <div class="col">
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" class="form-control mb-4" placeholder="">
+    </div>
+  </div>
 
-  <!-- Email -->
-  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-  <!-- Subject -->
-  <label>Subject</label>
-  <select class="browser-default custom-select mb-4">
-      <option value="" disabled>Choose option</option>
-      <option value="1" selected>Feedback</option>
-      <option value="2">Report a bug</option>
-      <option value="3">Feature request</option>
-      <option value="4">Feature request</option>
+
+  <label for="prenom">E-mail :</label>
+  <input type="email" id="email" class="form-control mb-4" placeholder="">
+
+  <div class="form-row">
+    <div class="col">
+      <label for="numero">Numéro de téléphone :</label>
+      <input type="text" id="numero" class="form-control mb-4" placeholder="">
+    </div>
+    <div class="col">
+      <label for="departement">Département :</label>
+      <input type="text" id="departement" class="form-control mb-4" placeholder="">
+    </div>
+  </div>
+
+  <label for="sujet">Sujet du message :</label>
+  <select id="sujet" class="browser-default custom-select mb-4">
+      <option value="" disabled>(Aucun objet)</option>
+      <option value="1">Demande de logement</option>
+      <option value="2">Recherche d'adresse</option>
+      <option value="2">Conseils et accompagnement</option>
   </select>
 
-  <!-- Message -->
   <div class="form-group">
-      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+      <label for="message">Message :</label>
+      <textarea class="form-control rounded-0" id="message" rows="3" placeholder=""></textarea>
   </div>
 
-  <!-- Copy -->
   <div class="custom-control custom-checkbox mb-4">
-      <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-      <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+      <input type="checkbox" class="custom-control-input" id="ContactFormCopy">
+      <label class="custom-control-label" for="ContactFormCopy">M'envoyer une copie du message</label>
   </div>
+  <small class="text-right mb-4 form-text text-muted">* Tout les champs sont obligatoire</small>
+  <!-- AJOUTER RE CAPTCHA -->
 
-  <!-- Send button -->
-  <button class="btn btn-info btn-block" type="submit">Send</button>
+  <button class="btn text-center btn-info btn-block" type="submit">Envoyer</button>
 </form>
 </div>
 
-<!-- Default form contact -->
 </div>

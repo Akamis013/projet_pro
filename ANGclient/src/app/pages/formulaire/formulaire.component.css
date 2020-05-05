@@ -1,5 +1,5 @@
 form {
-  margin: 15px 0;
+  margin-bottom: 18px;
   color: #163d39;
 }
 .form-control {
@@ -11,7 +11,6 @@ form {
 .btn-info{
   background-color:#d30a0f;
   border-color: #d30a0f;
-  width: 5°%;
 }
 .btn-info:hover {
   background-color: #e73221;
