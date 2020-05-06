@@ -13,6 +13,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OpenstreetmapComponent } from './openstreetmap/openstreetmap.component';
 
+
+
 let appRoutes: Routes= [
   {path:'Accueil', component:AccueilComponent},
   {path:'Formulaire', component:FormulaireComponent},

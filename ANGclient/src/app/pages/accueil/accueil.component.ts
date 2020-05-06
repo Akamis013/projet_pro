@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
-
-
+import {markerClusterGroup} from '../../../../node_modules/leaflet.markercluster';
+import 'leaflet';
+import 'leaflet.markercluster';
 
 declare var ol: any;
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
@@ -67,7 +68,11 @@ export class AccueilComponent implements OnInit {
   });
   L.marker([50.6311634, 3.0599573], {icon: myIcon}).bindPopup('Je suis un Frugal Marqueur').addTo(mymap).openPopup();
 
-
+  var marqueurs = L.markerClusterGroup();
+  marqueurs.addLayer(L.marker([50.6311634, 2.0499573],{icon: myIcon}));
+  marqueurs.addLayer(L.marker([50.6311634, 2.0599573],{icon: myIcon}));
+  marqueurs.addLayer(L.marker([50.6311634, 2.0699573],{icon: myIcon}));
+  mymap.addLayer(marqueurs);
 
 
   }
