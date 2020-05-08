@@ -5,6 +5,7 @@ import {markerClusterGroup} from '../../../../node_modules/leaflet.markercluster
 import 'leaflet';
 import 'leaflet.markercluster';
 
+
 declare var ol: any;
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -35,15 +36,20 @@ L.Marker.prototype.options.icon = iconDefault;
 export class AccueilComponent implements OnInit {
   logements;
   private coordonnéesurl = "https://opendata.paris.fr/api/records/1.0/search/?dataset=logements-sociaux-finances-a-paris&facet=annee&facet=bs&facet=mode_real&facet=arrdt&facet=nature_programme"
+  private url2 = "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr_crous_logement_france_entiere&q=&facet=zone&refine.zone=Paris+18";
   map: any;
+
+  array_coordonnes: coordonnées[];
 
   constructor(private _httpClient: HttpClient) {}
 
   ngOnInit() {
 
-    this._httpClient.get<any[]>(this.coordonnéesurl).subscribe(
+    this._httpClient.get<any[]>(this.url2).subscribe(
       (response) =>{
-        console.log(response);
+        //console.log(response);
+        this.array_coordonnes = response
+        console.log(this.array_coordonnes);
 
 
       },
@@ -56,7 +62,7 @@ export class AccueilComponent implements OnInit {
 
 
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
-    const mymap = L.map('map').setView([50.6311634, 3.0599573], 12);
+    const mymap = L.map('map').setView([50.6311634, 2.0499573], 12);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'Carte'
@@ -77,3 +83,14 @@ export class AccueilComponent implements OnInit {
 
   }
   }
+
+
+  interface coordonnées{
+
+    x : Number,
+    y : Number,
+    z : Number,
+
+  }
+
+
