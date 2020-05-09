@@ -38,7 +38,7 @@ let appRoutes: Routes= [
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 

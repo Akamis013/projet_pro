@@ -1,19 +1,22 @@
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     color: #FFFFFF;
+    position: sticky;
 }
 a{
-    color: #fff;
+    color: #163d39;
+}
+a:hover {
+  text-decoration: none;
+  color: #d30a0f;
 }
 .social{
     display: flex;
     justify-content: center;
 }
-.purple{
-    background-color: #aa66cc;
+.blue{
+    background-color: #49b1b1;
 }
-.deep-purple{
-    background-color: #9933CC;
+.deep-blue{
+    background-color: #fbb900;
 }
