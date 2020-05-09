@@ -5,7 +5,6 @@ import {markerClusterGroup} from '../../../../node_modules/leaflet.markercluster
 import 'leaflet';
 import 'leaflet.markercluster';
 
-
 declare var ol: any;
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -43,13 +42,45 @@ export class AccueilComponent implements OnInit {
 
   constructor(private _httpClient: HttpClient) {}
 
+
+
+  getcoordonnes(){
+
+
+
+  }
+
+
   ngOnInit() {
 
-    this._httpClient.get<any[]>(this.url2).subscribe(
+
+    let test = []
+    this._httpClient.get<coordonnées[]>(this.url2).subscribe(
       (response) =>{
-        //console.log(response);
-        this.array_coordonnes = response
-        console.log(this.array_coordonnes);
+
+
+        //console.log(response.records[1]);
+        //this.array_coordonnes = response.map( Objet => new coo )
+        //console.log(this.array_coordonnes);
+
+
+        for (let index = 0; index < response.records.length; index++) {
+
+          test[index]=response.records[index].geometry.coordinates[index];
+          console.log(response.records[index].geometry.coordinates);
+          console.log(response.records[index].geometry.coordinates[0]);
+          console.log(response.records[index].geometry.coordinates[1]);
+          for (let index = 0; index < test.length; index++) {
+            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon}))
+
+          }
+
+        }
+
+        for (let index = 0; index < test.length; index++) {
+          console.log(test[index])
+
+        }
 
 
       },
@@ -75,6 +106,11 @@ export class AccueilComponent implements OnInit {
   L.marker([50.6311634, 3.0599573], {icon: myIcon}).bindPopup('Je suis un Frugal Marqueur').addTo(mymap).openPopup();
 
   var marqueurs = L.markerClusterGroup();
+
+
+
+
+
   marqueurs.addLayer(L.marker([50.6311634, 2.0499573],{icon: myIcon}));
   marqueurs.addLayer(L.marker([50.6311634, 2.0599573],{icon: myIcon}));
   marqueurs.addLayer(L.marker([50.6311634, 2.0699573],{icon: myIcon}));
@@ -86,7 +122,7 @@ export class AccueilComponent implements OnInit {
 
 
   interface coordonnées{
-
+    records: number,
     x : Number,
     y : Number,
     z : Number,
