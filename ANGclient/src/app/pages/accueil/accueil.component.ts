@@ -34,11 +34,11 @@ L.Marker.prototype.options.icon = iconDefault;
 
 export class AccueilComponent implements OnInit {
   logements;
-  private coordonnéesurl = "https://opendata.paris.fr/api/records/1.0/search/?dataset=logements-sociaux-finances-a-paris&facet=annee&facet=bs&facet=mode_real&facet=arrdt&facet=nature_programme"
+  private coordonnéesurl = "https://opendata.paris.fr/api/records/1.0/search/?dataset=logements-sociaux-finances-a-paris&facet=annee&facet=bs&facet=mode_real&facet=arrdt&facet=nature_programme";
   private url2 = "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr_crous_logement_france_entiere&q=&facet=zone&refine.zone=Paris+18";
   map: any;
 
-  array_coordonnes: coordonnées;
+
 
   constructor(private _httpClient: HttpClient) {}
 
@@ -54,7 +54,7 @@ export class AccueilComponent implements OnInit {
   ngOnInit() {
 
 
-    let test = []
+    let test = [];
     this._httpClient.get<coordonnées>(this.url2).subscribe(
       (response) =>{
 
@@ -65,13 +65,14 @@ export class AccueilComponent implements OnInit {
 
 
         for (let index = 0; index < response.records.length; index++) {
-
-          test[index]=response.records[index].geometry.coordinates[index];
+          //@ts-ignore
+          test[index] = response.records[index].geometry.coordinates[index];
           //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates[0]);
           //console.log(response.records[index].geometry.coordinates[1]);
           for (let index = 0; index < test.length; index++) {
-            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon}))
+            //@ts-ignore
+            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon}));
 
           }
 
@@ -85,7 +86,7 @@ export class AccueilComponent implements OnInit {
         console.log('Erreur ! : ' + error);
       }
 
-    )
+    );
 
 
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
@@ -118,13 +119,9 @@ export class AccueilComponent implements OnInit {
 
 
   interface coordonnées{
-    records: coordonnées[],
-    geometry : coordonnées[],
-    coordinates ,
-    x : Number,
-    y : Number,
-    z : Number,
-
+    records: coordonnées[];
+    geometry: coordonnées[];
+    coordinates : coordonnées[];
   }
 
 
