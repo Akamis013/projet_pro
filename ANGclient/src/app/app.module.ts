@@ -12,7 +12,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OpenstreetmapComponent } from './openstreetmap/openstreetmap.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 let appRoutes: Routes= [
@@ -37,7 +37,9 @@ let appRoutes: Routes= [
     AppRoutingModule,
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
