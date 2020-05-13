@@ -40,6 +40,10 @@ export class FormulaireComponent implements OnInit {
 
     console.log("les données du formulaire sont "+this.loginForm.value);
     console.log(this.loginForm.value);
+    var json_client = JSON.stringify(this.loginForm.value);
   }
 
 }
+
+//https://medium.com/@BaaniLeen/connecting-angular-5-app-to-mongodb-database-mean-stack-9b4b4232e219
+
