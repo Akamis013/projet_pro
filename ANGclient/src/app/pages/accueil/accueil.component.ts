@@ -72,7 +72,12 @@ export class AccueilComponent implements OnInit {
 
 
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
-    var mymap = L.map('map').setView([50.6311634, 2.0499573], 12);
+    var mymap = L.map('map', {
+      minZoom: 0,
+      maxZoom: 0
+  });
+
+  mymap.setView([50.6311634, 3.0599573],12);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'Carte'

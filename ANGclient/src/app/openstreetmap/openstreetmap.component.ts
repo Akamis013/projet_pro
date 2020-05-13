@@ -57,7 +57,14 @@ export class OpenstreetmapComponent implements OnInit {
 
 
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
-    var mymap = L.map('map').setView([50.6311634, 2.0499573], 12);
+    var mymap = L.map('map', {
+      //minZoom: 0,
+      //maxZoom: 0
+      zoom : 2000
+  });
+
+  mymap.setView([48.6099786377,2.467800617 ],11);
+
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'Carte'
@@ -67,7 +74,6 @@ export class OpenstreetmapComponent implements OnInit {
     const myIcon = L.icon({
     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/images/marker-icon.png'
   });
-    L.marker([50.6311634, 3.0599573], {icon: myIcon}).bindPopup('Je suis un Frugal Marqueur').addTo(mymap).openPopup();
 
     var marqueurs = L.markerClusterGroup();
 
