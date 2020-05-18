@@ -34,13 +34,14 @@ export class OpenstreetmapComponent implements OnInit {
         for (let index = 0; index < response.records.length; index++) {
           //@ts-ignore
           test[index] = response.records[index].geometry.coordinates[index];
+          console.log(response.records[index]);
           //console.log(response.records[index].geometry.coordinates);
-          //console.log(response.records[index].geometry.coordinates[0]);
+          //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates[1]);
           for (let index = 0; index < test.length; index++) {
             //@ts-ignore
-            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon}));
-
+            //marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : <img style = "+"width : 150px , height : 100px ;"+" src = "+response.records[index].fields.photo+" </br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
+            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : "+response.records[index].fields.photo+" </br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
           }
 
         }
@@ -77,13 +78,6 @@ export class OpenstreetmapComponent implements OnInit {
 
     var marqueurs = L.markerClusterGroup();
 
-
-
-
-
-  marqueurs.addLayer(L.marker([50.6311634, 2.0499573],{icon: myIcon}));
-  marqueurs.addLayer(L.marker([50.6311634, 2.0599573],{icon: myIcon}));
-  marqueurs.addLayer(L.marker([50.6311634, 2.0699573],{icon: myIcon}));
   mymap.addLayer(marqueurs);
   }
 
