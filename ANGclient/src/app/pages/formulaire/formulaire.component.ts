@@ -1,6 +1,8 @@
 import { ReactiveFormsModule,Validators, FormBuilder,FormGroup,FormControl} from '@angular/forms';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-formulaire',
   templateUrl: './formulaire.component.html',
@@ -16,9 +18,23 @@ import { BrowserModule } from '@angular/platform-browser';
 export class FormulaireComponent implements OnInit {
 
 
+
+
+
   loginForm: FormGroup;
 
-  constructor( private fb: FormBuilder ) { }
+
+
+
+
+  constructor( private fb: FormBuilder, private router : Router) { }
+
+
+  submit(){
+
+    this.router.navigateByUrl('/validation');
+
+  }
 
   ngOnInit() {
 
@@ -38,9 +54,10 @@ export class FormulaireComponent implements OnInit {
 
   login(){
 
-    console.log("les données du formulaire sont "+this.loginForm.value);
+
     console.log(this.loginForm.value);
     var json_client = JSON.stringify(this.loginForm.value);
+    this.router.navigateByUrl('/validation');
   }
 
 }
