@@ -35,7 +35,7 @@ export class OpenstreetmapComponent implements OnInit {
           //@ts-ignore
           //console.log(response.records.length);
           test[index] = response.records[index].geometry.coordinates[index];
-          //console.log(response.records[index]);
+          console.log(response.records[index]);
           //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates[1]);
@@ -48,7 +48,7 @@ export class OpenstreetmapComponent implements OnInit {
 
             //console.log(response.records[index].fields.address)
             //@ts-ignore
-            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : <img style = "+"width : 150"+"  height : 100 "+" src = "+response.records[index].fields.photo+" </br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
+            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : <img style = "+"width : 150px"+"  height : 100px "+" src = "+response.records[index].fields.photo+" </br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
             //marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : "+response.records[index].fields.photo+" </br> Téléphone : "+"</br>Accés : "+ response.records[index].fields.services);
             mymap.addLayer(marqueurs);
           }

@@ -13,12 +13,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OpenstreetmapComponent } from './openstreetmap/openstreetmap.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ValidationFormulaireComponent } from './pages/validation-formulaire/validation-formulaire.component';
 
 
 let appRoutes: Routes= [
   {path:'Accueil', component:AccueilComponent},
   {path:'Formulaire', component:FormulaireComponent},
-  {path: '', component:AccueilComponent}
+  {path: '', component:AccueilComponent},
+  {path : 'validation', component : ValidationFormulaireComponent}
   ]
 
 
@@ -31,6 +33,7 @@ let appRoutes: Routes= [
     AccueilComponent,
     ProfileComponent,
     OpenstreetmapComponent,
+    ValidationFormulaireComponent,
   ],
   imports: [
     BrowserModule,
