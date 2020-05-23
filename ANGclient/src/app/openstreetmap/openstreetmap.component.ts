@@ -46,9 +46,9 @@ export class OpenstreetmapComponent implements OnInit {
 
 
 
-            //console.log(response.records[index].fields.address)
+            //console.log(response.records[index])
             //@ts-ignore
-            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : <img style = "+"width = 200px"+"  height = 200px "+" src = "+response.records[index].fields.photo+" </br></br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
+            marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+response.records[index].fields.zone+" </br> Photo : <img style = "+"width = 200px"+"  height = 200px "+" src = "+response.records[index].fields.photo+" </br></br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
 
             //marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : <img style = "+"width = 150px"+"  height : 100px "+" src = "+response.records[index].fields.photo+" </br> Téléphone : "+response.records[index].fields.phone+"</br>Accés : "+ response.records[index].fields.services);
             //marqueurs.addLayer(L.marker([response.records[index].geometry.coordinates[1],response.records[index].geometry.coordinates[0]],{icon:myIcon})).bindPopup("Nom : "+ response.records[index].fields.title + " </br>Adresse :"+response.records[index].fields.address+"<br>Arrondissement : "+" </br> Photo : "+response.records[index].fields.photo+" </br> Téléphone : "+"</br>Accés : "+ response.records[index].fields.services);
