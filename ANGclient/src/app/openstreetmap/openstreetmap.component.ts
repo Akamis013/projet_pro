@@ -35,7 +35,7 @@ export class OpenstreetmapComponent implements OnInit {
           //@ts-ignore
           //console.log(response.records.length);
           test[index] = response.records[index].geometry.coordinates[index];
-          console.log(response.records[index]);
+          //console.log(response.records[index]);
           //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates);
           //console.log(response.records[index].geometry.coordinates[1]);
