@@ -14,13 +14,15 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { OpenstreetmapComponent } from './openstreetmap/openstreetmap.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationFormulaireComponent } from './pages/validation-formulaire/validation-formulaire.component';
+import { ListeAppartComponent } from './pages/liste-appart/liste-appart.component';
 
 
 let appRoutes: Routes= [
   {path:'Accueil', component:AccueilComponent},
   {path:'Formulaire', component:FormulaireComponent},
   {path: '', component:AccueilComponent},
-  {path : 'validation', component : ValidationFormulaireComponent}
+  {path : 'validation', component : ValidationFormulaireComponent},
+  {path : 'liste', component : ListeAppartComponent}
   ]
 
 
@@ -34,6 +36,7 @@ let appRoutes: Routes= [
     ProfileComponent,
     OpenstreetmapComponent,
     ValidationFormulaireComponent,
+    ListeAppartComponent,
   ],
   imports: [
     BrowserModule,
