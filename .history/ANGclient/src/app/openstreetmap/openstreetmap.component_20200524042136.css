@@ -1,0 +1,16 @@
+#map {
+
+  height : 2000px;
+  width: 100%;
+
+}
+.container {
+  padding-top: 100px;
+  min-height: 90vh;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
