@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    color: #FFFFFF;
+    position: sticky;
+}
+a{
+    color: #163d39;
+}
+a:hover {
+  text-decoration: none;
+  color: #d30a0f;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.blue{
+    background-color: #49b1b1;
+}
+.yellow{
+    background-color: #fbb900;
+}

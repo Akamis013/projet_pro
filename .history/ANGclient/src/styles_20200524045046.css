@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url("assets/fonts/kenyancoffeerg.ttf") format("truetype"),
+}
+
+h4 {
+  font-family: 'Kenyan Coffee';
+}

@@ -1,0 +1,9 @@
+.container {
+  padding-top: 20vh;
+  height: 80vh;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+

@@ -1,0 +1,23 @@
+#map{
+
+height : 400px;
+width: 400px;
+
+}
+.masthead {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('/assets/images/france-habitation.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.title-container {
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 40px 0;
+}

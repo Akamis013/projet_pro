@@ -1,0 +1,57 @@
+<div class="container">
+  <!-- Default form contact -->
+  <div class="row justify-content-center">
+    <h2 class="h2 mb-4 red text-center">Bénéficiez d’un accompagnement personnalisé et gratuit</h2>
+
+    <form class="border border-light p-4 col-lg-7" action="#!" [formGroup]="loginForm" (ngSubmit)=login()>
+      <div class="form-row">
+        <div class="col">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" class="form-control mb-4" placeholder="" formControlName="nom">
+        </div>
+        <div class="col">
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" class="form-control mb-4" placeholder="" formControlName="prenom">
+        </div>
+      </div>
+
+      <label for="prenom">E-mail :</label>
+      <input type="email" id="email" class="form-control mb-4" placeholder="" formControlName="email">
+
+      <div class="form-row">
+        <div class="col">
+          <label for="numero">Numéro de téléphone :</label>
+          <input type="text" id="numero" class="form-control mb-4" placeholder="" formControlName="telephone">
+        </div>
+        <div class="col">
+          <label for="departement">Département :</label>
+          <input type="text" id="departement" class="form-control mb-4" placeholder="" formControlName="departement">
+        </div>
+      </div>
+
+      <label for="sujet">Sujet du message :</label>
+      <select id="sujet" class="browser-default custom-select mb-4">
+          <option value="" disabled>(Aucun objet)</option>
+          <option value="1">Demande de logement</option>
+          <option value="2">Recherche d'adresse</option>
+          <option value="2">Conseils et accompagnement</option>
+      </select>
+
+      <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea class="form-control rounded-0" id="message" rows="3" placeholder="" formControlName="message"></textarea>
+      </div>
+
+      <div class="custom-control custom-checkbox mb-4">
+          <input type="checkbox" class="custom-control-input" id="ContactFormCopy">
+          <label class="custom-control-label" for="ContactFormCopy">M'envoyer une copie du message</label>
+      </div>
+      <small class="text-right mb-4 form-text text-muted">* Tout les champs sont obligatoire</small>
+      <!-- AJOUTER RE CAPTCHA -->
+    <a>
+      <button class="btn text-center btn-info btn-block" type="submit"(ngSubmit)="submit()">Envoyer</button>
+    </a>
+    </form>
+  </div>
+
+</div>

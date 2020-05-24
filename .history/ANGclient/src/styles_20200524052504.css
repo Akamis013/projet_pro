@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url("assets/fonts/kenyancoffeerg.ttf") format("truetype");
+  font-weight: 300;
+
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2, h1, h4, nav a {
+  font-family: 'Kenyan Coffee';
+}
+
+.red { color:#d30a0f; }
+.blue { color: #49b1b1}
+.darktext { color: #163d39; }
