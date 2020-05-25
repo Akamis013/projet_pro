@@ -15,6 +15,7 @@ import { OpenstreetmapComponent } from './openstreetmap/openstreetmap.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationFormulaireComponent } from './pages/validation-formulaire/validation-formulaire.component';
 import { ListeAppartComponent } from './pages/liste-appart/liste-appart.component';
+import { DetailappartComponent } from './pages/detailappart/detailappart.component';
 
 
 let appRoutes: Routes= [
@@ -22,7 +23,8 @@ let appRoutes: Routes= [
   {path:'Formulaire', component:FormulaireComponent},
   {path: '', component:AccueilComponent},
   {path : 'validation', component : ValidationFormulaireComponent},
-  {path : 'liste', component : ListeAppartComponent}
+  {path : 'liste', component : ListeAppartComponent},
+  {path : 'detail', component : DetailappartComponent}
   ]
 
 
@@ -37,6 +39,7 @@ let appRoutes: Routes= [
     OpenstreetmapComponent,
     ValidationFormulaireComponent,
     ListeAppartComponent,
+    DetailappartComponent,
   ],
   imports: [
     BrowserModule,
