@@ -7,17 +7,18 @@ form {
   color: #163d39;
 }
 
-.btn-info{
+.btn-red{
   background-color:#d30a0f;
   border-color: #d30a0f;
   font-size: 1.5em;
   letter-spacing: 0.5px;
+  color: #fff;
 }
-.btn-info:hover {
+.btn-red:hover {
   background-color: #e73221;
 }
 .container {
-  padding-top: 100px;
+  padding-top: 120px;
   min-height: 90vh;
   position: relative;
   margin: 0;

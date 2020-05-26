@@ -5,14 +5,17 @@
 
 }
 .container {
-  padding-top: 100px;
+  padding-top: 120px;
   min-height: 90vh;
   position: relative;
   margin: 0;
   min-width: 100%;
   min-height: 100%;
 }
-
 .h4{
   color:#1a3f3b;
+}
+.leaflet-container {
+  font: 12px Verdana;
+  line-height: 1.5;
 }

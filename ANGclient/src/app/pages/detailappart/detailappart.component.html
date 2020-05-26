@@ -1,3 +1,4 @@
+<h2 class="h2 mb-4 blue text-center">Plus d'informations sur cette habitation<!--{{habitation.fields.title}}--></h2>
 <ng-container *ngFor = "let habitation of appart">
 <div *ngIf="habitation.fields.id === this.id_front">
 <h1> {{habitation.fields.title}}</h1>
@@ -6,3 +7,5 @@
 <a href="{{habitation.fields.bookingurl}}">Pour réserver</a>
 </div>
 </ng-container>
+
+

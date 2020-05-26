@@ -5,8 +5,8 @@
   font-weight: 300;
 
 }
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+body, html {
+  font-family: Verdana!important;
 }
 h2, h1, h4, nav a, .btn {
   font-family: 'Kenyan Coffee';
