@@ -44,7 +44,7 @@ export class ListeAppartComponent implements OnInit  {
           //@ts-ignore
           let appart_image = result.records[index].fields.photo;
           //@ts-ignore
-          console.log(result.records[index].fields.id);
+          //console.log(result.records[index].fields.id);
           //this.appart.id = result.records[index].fields.id;
           //console.log(this.appart.id);
           this.appart = result['records']

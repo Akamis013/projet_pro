@@ -75,7 +75,8 @@ export class OpenstreetmapComponent implements OnInit {
       zoom : 2000
   });
 
-  mymap.setView([48.6099786377,2.467800617 ],11);
+  mymap.setView([48.8499786377,2.327800617 ],11);
+  mymap.setZoom(13);
 
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {

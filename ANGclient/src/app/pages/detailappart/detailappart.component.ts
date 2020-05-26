@@ -20,8 +20,8 @@ export class DetailappartComponent implements OnInit {
 
   ngOnInit(){
 
-    console.log(this.id);
-    console.log(this.id_front);
+    //console.log(this.id);
+    //console.log(this.id_front);
     let test = [];
     this.http.get(this.url2).subscribe(result => {
 
