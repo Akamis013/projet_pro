@@ -1,1 +1,8 @@
-<p>detailappart works!</p>
+<ng-container *ngFor = "let habitation of appart">
+<div *ngIf="habitation.fields.id === this.id_front">
+<h1> {{habitation.fields.title}}</h1>
+<img src= "{{habitation.fields.photo}}"/>
+<p>Adresse : {{habitation.fields.address}}</p>
+<a href="{{habitation.fields.bookingurl}}">Pour réserver</a>
+</div>
+</ng-container>

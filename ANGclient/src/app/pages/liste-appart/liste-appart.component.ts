@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-liste-appart',
   templateUrl: './liste-appart.component.html',
@@ -9,15 +10,16 @@ export class ListeAppartComponent implements OnInit  {
 
   private url2 = "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr_crous_logement_france_entiere&q=&facet=zone&refine.zone=Paris+18";
 
-  public appart: appartement[];
+  public appart: appartement;
+  public id ;
   response: any;
-  constructor(private http : HttpClient) {
+  constructor(private http : HttpClient, private activatedRoute : ActivatedRoute) {
 
    }
 
   ngOnInit(){
 
-
+    this.id = this.activatedRoute.snapshot.params['id'];
     let test = [];
     this.http.get(this.url2).subscribe(result => {
 
@@ -41,7 +43,10 @@ export class ListeAppartComponent implements OnInit  {
           //console.log(appart_adress);
           //@ts-ignore
           let appart_image = result.records[index].fields.photo;
-
+          //@ts-ignore
+          console.log(result.records[index].fields.id);
+          //this.appart.id = result.records[index].fields.id;
+          //console.log(this.appart.id);
           this.appart = result['records']
           //console.log(this.appart);
 
@@ -72,7 +77,7 @@ export class ListeAppartComponent implements OnInit  {
 
 
   interface appartement {
-
+    id : number,
     nom : string,
     Adresse : string,
     Arrondissement : string ,
@@ -80,5 +85,6 @@ export class ListeAppartComponent implements OnInit  {
     telephone : string,
     Accés : string,
     fields : any,
+    records : any,
 
   }

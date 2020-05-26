@@ -24,7 +24,7 @@ let appRoutes: Routes= [
   {path: '', component:AccueilComponent},
   {path : 'validation', component : ValidationFormulaireComponent},
   {path : 'liste', component : ListeAppartComponent},
-  {path : 'detail', component : DetailappartComponent}
+  {path : 'detail/:id', component : DetailappartComponent}
   ]
 
 
