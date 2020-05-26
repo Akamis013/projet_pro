@@ -47,7 +47,7 @@ export class DetailappartComponent implements OnInit {
           let appart_image = result.records[index].fields.photo;
 
           this.appart = result['records']
-          console.log(this.appart);
+          //console.log(this.appart);
 
 
 
