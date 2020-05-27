@@ -1,0 +1,18 @@
+<div class="container" style = "text-align: center;">
+  <ng-container *ngFor = "let habitation of appart">
+    <div *ngIf="habitation.fields.id === this.id_front">
+      <h2 class="h2 blue text-center">Plus d'informations sur cette habitation</h2>
+
+      <h1 class="h2 mb-4 dark-text text-center">{{habitation.fields.title}}</h1>
+    <img style="text-align: center;" src= "{{habitation.fields.photo}}"/>
+    <p>Adresse : {{habitation.fields.address}}</p>
+    <p>Téléphone : {{habitation.fields.phone}}</p>
+    <p> Services : {{habitation.fields.services}}</p>
+    <a href="#" class="btn btn-primary" routerLink='/liste'>retour</a>
+
+    <a href="{{habitation.fields.bookingurl}}" class = "btn btn-danger" style = "margin-left: 130px;">Faire une demande</a>
+
+    </div>
+  </ng-container>
+</div>
+

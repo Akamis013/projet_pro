@@ -1,0 +1,14 @@
+.container {
+  padding-top: 120px;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  padding-bottom: 75px;
+}
+h1 {
+  font-size: 2.5rem;
+}
+.details {
+  margin-top: 60px;
+}

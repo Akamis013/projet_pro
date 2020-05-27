@@ -19,11 +19,12 @@
 <ng-container *ngFor = "let habitation of appart">
   <div class="container" *ngIf="habitation.fields.id === this.id_front">
 
+<h1 class="mb-4">{{habitation.fields.title}}</h1>
     <div class="row justify-content-md-center">
-      <div class="col-md-10">
-        <h1 class="mb-4">{{habitation.fields.title}}</h1>
-      </div>
+
       <div class="col-md-6">
+
+
         <img class="img-fluid" src="{{habitation.fields.photo}}" alt="">
       </div>
 
