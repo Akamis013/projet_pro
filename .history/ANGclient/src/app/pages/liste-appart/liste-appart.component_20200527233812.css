@@ -15,7 +15,6 @@
 }
 .btn {
   border-radius: 0;
-  width: 50%;
 }
 .btn-red{
   background-color:#d30a0f;
@@ -23,8 +22,6 @@
   font-size: 1em;
   letter-spacing: 0.5px;
   color: #fff;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
 }
 .btn-red:hover {
   background-color: #e73221;
@@ -34,8 +31,6 @@
   border-color: #fbb900;
   font-size: 1em;
   letter-spacing: 0.5px;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 .btn-yellow:hover {
   background-color: #fdc401;

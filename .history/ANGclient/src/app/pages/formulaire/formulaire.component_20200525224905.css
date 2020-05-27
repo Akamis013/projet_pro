@@ -1,0 +1,27 @@
+form {
+  margin-bottom: 18px;
+  color: #163d39;
+  background: #fafafa;
+}
+.form-control {
+  color: #163d39;
+}
+
+.btn-info{
+  background-color:#d30a0f;
+  border-color: #d30a0f;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+}
+.btn-info:hover {
+  background-color: #e73221;
+}
+.container {
+  padding-top: 120px;
+  min-height: 90vh;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+

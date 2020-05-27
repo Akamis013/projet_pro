@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="h2 mb-4 blue text-center">Nos offres d'habitations parisiennes disponibles</h2>
+  <div class="row">
+  <ng-container *ngFor = "let habitation of appart">
+    <div class="col-sm-12 col-md-4" style="margin-bottom:10px;">
+      <div class="card" style="width: 360px;">
+        <img class="card-img-top" alt="Card image cap" style = "height: 286px ; width : 360px;" src = "{{habitation.fields.photo}}">
+
+        <div class="card-body" >
+          <h5 class="card-title">{{habitation.fields.title}}</h5>
+          <p class="card-text">{{habitation.fields.address}}</p>
+          <a href="#" class="btn btn-yellow" routerLink="../detail">+ d'infos</a>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+<ng-container *ngFor = "let habitation of appart">
+
+  <div class="col-lg-2 col-md-3 col-6" style="margin-bottom:10px;">
+    <div class="card" style="width: 360px;">
+      <img class="card-img-top" alt="Card image cap" style = "height: 286px ; width : 360px;" src = "{{habitation.fields.photo}}">
+
+      <div class="card-body" >
+        <h5 class="card-title">{{habitation.fields.title}}</h5>
+        <p class="card-text">{{habitation.fields.address}}</p>
+        <a href="#" class="btn btn-primary" routerLink="../detail">+ d'infos</a>
+      </div>
+    </div>
+  </div>
+
+</ng-container>
+</div>

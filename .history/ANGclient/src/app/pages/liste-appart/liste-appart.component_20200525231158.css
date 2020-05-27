@@ -1,0 +1,21 @@
+.container {
+  padding-top: 120px;
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+.btn-red{
+  background-color:#d30a0f;
+  border-color: #d30a0f;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+.btn-red:hover {
+  background-color: #e73221;
+}
