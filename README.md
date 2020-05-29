@@ -8,15 +8,3 @@ Code de départ pour une application MEAN
 - Installer les dépendances `npm i`.
 - Tomber amoureux de Javascript `npm start`.
 
-# MEAN tutorial 
-
-https://github.com/DWS-paris/MEANstack/wiki
-
-
-# MongoDB 
-
-
-# leaflet markercluster 
-
-https://github.com/Asymmetrik/ngx-leaflet-markercluster
-https://github.com/Leaflet/Leaflet.markercluster#usage
