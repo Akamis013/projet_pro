@@ -1,10 +1,11 @@
-# MEANquickstart_2019
+# Projet Coeur de logement
 
-Code de départ pour une application MEAN
 
-## Configuration
+# Api Node JS mongoDB
 
-- Créer un fichier `.env` à la racine du serveur een utilisant le fichier `.env.dist`.
-- Installer les dépendances `npm i`.
-- Tomber amoureux de Javascript `npm start`.
+Launch npm start to start the API who will connect to the mongo database
 
+
+# Start the angular front 
+
+Launch npm start in the ANGclient folder to compile the front 
